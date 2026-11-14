@@ -1,0 +1,63 @@
+:root {
+  --bg: #121212;
+  --panel: #1c1c1c;
+  --text: #e8e4dc;
+  --muted: #a39d92;
+  --accent: #c8402e;
+  --rule: #2e2e2e;
+  --max: 960px;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+a { color: #ef7a64; }
+a:hover { color: #ff9a86; }
+header.site, footer.site, main {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 16px;
+}
+header.site {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--rule);
+}
+header.site .brand { color: var(--text); text-decoration: none; font-weight: 700; letter-spacing: 0.04em; }
+header.site nav a { margin-left: 16px; color: var(--muted); text-decoration: none; font-size: 15px; }
+header.site nav a:hover { color: var(--text); }
+.hero { padding: 32px 0 8px; }
+.hero img.feature { width: 100%; height: auto; display: block; border-radius: 6px; image-rendering: pixelated; }
+.title-row { display: flex; align-items: center; gap: 16px; margin: 24px 0 8px; }
+.title-row img { width: 72px; height: 72px; border-radius: 14px; image-rendering: pixelated; }
+h1 { font-size: 30px; line-height: 1.2; margin: 0; }
+h2 { font-size: 15px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin: 36px 0 8px; }
+.tagline { color: var(--muted); margin: 0; }
+.badge { display: inline-block; margin-top: 16px; padding: 8px 14px; border: 1px solid var(--rule); border-radius: 6px; background: var(--panel); color: var(--muted); font-size: 15px; }
+.shots { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin: 16px 0; }
+.shots img { width: 100%; height: auto; display: block; border-radius: 4px; image-rendering: pixelated; }
+@media (max-width: 600px) {
+  .shots { grid-template-columns: 1fr; }
+  h1 { font-size: 24px; }
+  .title-row img { width: 56px; height: 56px; }
+}
+main p { max-width: 68ch; }
+.policy h1 { margin-top: 32px; }
+.policy .meta { color: var(--muted); }
+footer.site {
+  margin-top: 48px;
+  padding-top: 18px;
+  padding-bottom: 32px;
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-size: 14px;
+}
+footer.site p { margin: 4px 0; }
